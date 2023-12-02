@@ -1,7 +1,7 @@
 #include "Figure.hpp"
 
 
-class Trapezoid : Figure {
+class Trapezoid : public Figure {
     public:
         Trapezoid();
         Trapezoid(std::vector<double> &x, std::vector<double> &y);
@@ -41,7 +41,7 @@ inline std::istream& operator>>(std::istream &is, Trapezoid &fig) {
     for( int i = 0; i < 4; i++) {
         std::cout << "Введите "<< i + 1 << "-ую точку: "; 
         is >> fig.x[i] >> fig.y[i];
-        std::cout << '\n';
+        
     }
     return is;
 }

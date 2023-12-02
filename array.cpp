@@ -19,10 +19,12 @@ array::array(size_t size) {
 }
 
 array::~array() {
-    for(size_t i = 0; i < _size; i++) {
-        delete _figures[i];
-        _figures[i] = nullptr;
-    }
+    // for(size_t i = 0; i < _size; i++) {
+    //     if(_figures[i] != nullptr ) {
+    //         delete _figures[i];
+    //         _figures[i] = nullptr;
+    //     }}
+        
     _size = 0;
     delete[] _figures;
     _figures = nullptr;
